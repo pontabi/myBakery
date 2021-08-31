@@ -5,18 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>給食パン屋</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
   <body>
     <header class="page-header wrapper">
       <h1><a href="index.html"><img src="img/logo_01.svg" class="logo" alt="給食パン屋ロゴ"></a></h1>
-      <nav>
-        <ul class="main-nav">
-          <li><a href="features.html">Feature</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="about.html">About</a></li>
+      <nav class="sp-nav">
+          <div class='humberger'><span class="material-icons" id="open">menu</span></div>
+        </nav>
+        <nav>
+          <ul class="pc-nav">
+            <li><a href="features.html">Feature</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <div class="overlay">
+        <span class="material-icons" id='close'>close</span>
+        <ul>
+          <li><a href="#">Feature</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">About</a></li>
         </ul>
-      </nav>
-    </header>
+      </div>
+
     <main>
       <div class="mv">
         <div class="mv-container">
@@ -86,6 +101,7 @@
       </div>
       <p>(c) 給食パン屋</p>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 
 </html>

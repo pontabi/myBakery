@@ -4,51 +4,99 @@ body {
 }
 
 .page-header {
+  margin: 0;
+  padding: 0;
   width: 100%;
   position: fixed;
   background-color: #fff;
   box-shadow: 0px 10px 10px -5px rgb(0 0 0 / 10%);
-}
-
-.logo{
-  width:210px;
-  margin-top: 14px;
-}
-
-.page-header nav {
-  display: flex;
-  align-items: center;
-}
-
-.main-nav{
-  display: flex;
-  font-size: 1.25em;
-  text-transform: uppercase;
-  list-style: none;
-}
-
-.main-nav li{
-  margin-left: 36px;
-}
-
-.main-nav a{
-  color: #432;
-  text-decoration: none;
-}
-
-.main-nav a:hover{
-  color: #0bd;
-}
-
-.page-header{
   display: flex;
   justify-content: space-between;
 }
 
-.wrapper{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 4%;
+.logo{
+  width:210px;
+  margin-left: 32px;
+}
+
+.pc-nav {
+  display: none;
+  pointer-events: none;
+}
+
+.sp-nav {
+  margin-left: auto;
+  margin-right: 32px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.sp-nav:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+
+.sp-nav #open {
+  font-size: 40px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  padding-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 24px;
+  right: 30px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 main {
@@ -125,4 +173,40 @@ footer img {
 
 .menu-list {
   margin: 32px;
+}
+
+@media (min-width: 700px) {
+
+  .sp-nav {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .page-header nav {
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .pc-nav{
+    padding: 0;
+    display: flex;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    list-style: none;
+    pointer-events: auto;
+  }
+  
+  .pc-nav li{
+    margin-left: 36px;
+  }
+  
+  .pc-nav a{
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .pc-nav a:hover{
+    color: #0bd;
+  }
 }
