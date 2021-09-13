@@ -2,6 +2,11 @@ body {
   margin: 0;
   line-height: 32px;
   font-size: 14px;
+  background-color: #FEFBF3;
+}
+
+h1 {
+  font-size: 21px;
 }
 
 .page-header {
@@ -9,8 +14,8 @@ body {
   padding: 0;
   width: 100%;
   position: fixed;
-  background-color: #fff;
-  border-bottom: 4px solid #E78C4E;
+  background-color: #F8F0DF;
+  border-bottom: 4px solid #FFB344;
   box-shadow: 0px 10px 10px -5px rgb(0 0 0 / 10%);
   display: flex;
   justify-content: space-between;
@@ -115,7 +120,8 @@ main {
   height: 75vh;
   text-align: center;
   /* background: url(../img/mv-background.jpg); */
-  color: white;
+  background-size: cover;
+  color: #fff;
   box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.1);
   transition: background .5s;
 }
@@ -132,6 +138,37 @@ main {
   margin: 16px;
 }
 
+/* お知らせ */
+.news {
+  margin: 24px 24px 64px;
+  text-align: center;
+}
+
+.news > h1 {
+  border-bottom: 2px solid #FFB344;
+  padding:4px;
+  margin: 24px auto;
+  width: 150px;
+}
+
+.news ul {
+  list-style: none;
+  margin: 24px auto 64px;
+  padding: 0;
+  width: 300px;
+}
+
+.news .date {
+  font-size: 10px;
+  line-height: 12px;
+  color: #9d9d9d;
+  padding: 0;
+}
+
+.news li {
+  margin-bottom: 24px;
+}
+
 /* お店の特徴 */
 .store-feature {
   margin: 8px;
@@ -139,15 +176,18 @@ main {
 }
 
 .store-feature > h1 {
-  border-bottom: 2px solid #E78C4E;
+  border-bottom: 2px solid #FFB344;
   padding:4px;
+  margin: 0 auto 24px;
+  text-align: center;
+  width: 150px;
 }
 
 .store-feature li {
   list-style-type: none;
   background-color: #f2f2f2;
   box-shadow: 0px 10px 10px -5px rgb(0 0 0 / 10%);
-  margin-bottom: 8px;
+  margin-bottom:24px;
   padding: 8px;
 }
 
@@ -169,8 +209,11 @@ main {
 }
 
 .menu-list > h1 {
-  border-bottom: 2px solid #E78C4E;
-  padding: 4px;
+  border-bottom: 2px solid #FFB344;
+  padding:4px;
+  margin: 0 auto 24px;
+  text-align: center;
+  width: 150px;
 }
 
 .menu-list img {
@@ -180,7 +223,7 @@ main {
 }
 
 .menu-list > .container section {
-  margin-bottom: 8px;
+  margin-bottom: 24px;
   background-color: #f2f2f2;
   box-shadow: 0px 10px 10px -5px rgb(0 0 0 / 10%);
   text-align: center;
@@ -191,14 +234,23 @@ main {
   
 }
 
+/* お店の情報 */
+.shopInfo > h1 {
+  border-bottom: 2px solid #FFB344;
+  padding:4px;
+  text-align: center;
+  margin: 24px auto;
+  width: 150px;
+}
+
 /* フッター */
 
 footer {
-  border-top: 1px solid #c1c1c1;
+  /* border-top: 4px solid #FFB344; */
   text-align: center;
   align-items: center;
   padding: 16px;
-  background: #f2f2f2;
+  background: #9D9D9D;
 }
 
 
@@ -239,7 +291,22 @@ footer img {
   }
   
   .pc-nav a:hover{
-    color: #E78C4E;
+    color: #FFB344;
+  }
+
+  .news ul{
+    width: 600px;
+  }
+
+  .news li {
+    display: flex;
+    justify-content: center;
+  }
+
+  .news .date {
+    height: 32px;
+    line-height: 32px;
+    margin-right: 32px;
   }
 
   .store-feature {
